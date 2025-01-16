@@ -1,0 +1,13 @@
+%portfolio {
+    font-family: $fonte-titulos;
+    font-weight: 800;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+  }
+  
+  %caixa-projetos {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 4rem;
+    position: relative;}

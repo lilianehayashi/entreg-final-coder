@@ -1,35 +1,6 @@
-$verde-fundo: #344C36;
-$amarelo: #FAAD1B;
-$bege: #DBD2C1;
-$preto: #000000;
-
-$fonte-titulos: "BioRhyme", serif;
-$fonte-textos: "Bellota", serif;
-
-%fonte-portfolio {
-  font-family: $fonte-titulos;
-  font-weight: 800;
-  font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
-}
-
-%caixa-projetos {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  gap: 4rem;
-  position: relative;}
-
-@mixin font-works ($cor-fonte: $preto) {
-  font-family: $fonte-titulos;
-  font-weight: 800;
-  font-size: 11rem;
-  font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
-    color: $cor-fonte;
-  padding-left: 5rem;
-}
+@import 'variables';
+@import 'extends';
+@import 'mixings';
 
 * {
     margin: 0;
@@ -37,10 +8,14 @@ $fonte-textos: "Bellota", serif;
     box-sizing: border-box;
 } 
 
+.body {
+  background-color: $verde;
+}
+
 .navegador {
     display: flex;
     flex-direction: row;
-    background-color: $verde-fundo;
+    background-color: $verde;
     padding: 1.5em;
     position: fixed;
     width: 100%;
@@ -98,11 +73,11 @@ $fonte-textos: "Bellota", serif;
 
 .pagina-principal {
   display: block;
-    background-color: $verde-fundo;
-    /*position: absolute;
-    top: 4rem;*/
+    background-color: $verde;
+    position: absolute;
+    top: 4rem;
     width: 100%;
-    height: 67rem;
+    height: 100rem;
 }
 
 .caixa-port h1 {
@@ -118,24 +93,24 @@ $fonte-textos: "Bellota", serif;
 }
 
 .biorhyme-port-preenchido {
-  @extend %fonte-portfolio;
+  @extend %portfolio;
     color: $bege;
   z-index: 4;
   position: relative;
 }
 
 .biorhyme-port-vazado-amarelo {
-  @extend %fonte-portfolio;
+  @extend %portfolio;
   text-shadow:$amarelo 1px -1px, $amarelo -1px 1px, $amarelo 1px 1px, $amarelo -1px -1px;
-    color: $verde-fundo;
+    color: $verde;
   z-index: 1;
   position: relative;
 }
 
 .biorhyme-port-vazado-bege {
-  @extend %fonte-portfolio;
+  @extend %portfolio;
   text-shadow:$bege 1px -1px, $bege -1px 1px, $bege 1px 1px, $bege -1px -1px;
-    color: $verde-fundo;
+    color: $verde;
     z-index: 1;
 }
 
@@ -152,7 +127,7 @@ $fonte-textos: "Bellota", serif;
   grid-template-columns: 50% 50%;
   background-color: $preto;
   position: absolute;
-  top: 67rem;
+  top: 71rem;
   width: 100%;
   height: 30rem;
   padding-top: 13rem;
@@ -176,13 +151,14 @@ $fonte-textos: "Bellota", serif;
   flex-direction: column;
   background-color: $bege;
   position: absolute;
-  top: 97rem;
+  top: 100rem;
   width: 100%;
   height: 37rem;
 }
 
+
 .biorhyme-some-of {
-  @include font-works;
+  @include works;
   padding-top: 3rem;
     /*position: relative;
     left: 5rem;
@@ -190,7 +166,7 @@ $fonte-textos: "Bellota", serif;
 }
 
 .biorhyme-my-works {
-  @include font-works ($cor-fonte: $verde-fundo);
+  @include works ($cor-fonte: $verde);
   margin-top: -5rem;
     /*position: relative;
     top: -1rem;
@@ -212,7 +188,7 @@ $fonte-textos: "Bellota", serif;
 .div-projects {
   display: flex;
   flex-direction: column;
-  background-color: $verde-fundo;
+  background-color: $verde;
   position: absolute;
   top: 134rem;
   height: 93.7rem;
@@ -227,7 +203,7 @@ $fonte-textos: "Bellota", serif;
   text-shadow:$amarelo 1px -1px, $amarelo -1px 1px, $amarelo 1px 1px, $amarelo -1px -1px;
   font-variation-settings:
     "wdth" 100;
-    color: $verde-fundo;
+    color: $verde;
     margin-bottom: -2rem;
     position: relative;
     left: 2rem;
@@ -240,10 +216,10 @@ $fonte-textos: "Bellota", serif;
   grid-template-rows: 1fr;
   gap: 4rem;
   width: 80%;
-  height: 100rem;
+  height: 120rem;
   justify-self: center;
   position: relative;
-  top: 76rem;
+  top: 152rem;
   z-index: 5;
 }
 
@@ -266,7 +242,7 @@ $fonte-textos: "Bellota", serif;
   font-style: normal;
   font-variation-settings:
     "wdth" 100;
-  color: $verde-fundo;
+  color: $verde;
   padding-left: 1.5rem;
   align-items: start;
   justify-items: start;
@@ -275,8 +251,8 @@ $fonte-textos: "Bellota", serif;
 
 .fundo-bege {
   background-color: $bege;
-  height: 20rem;
+  height: 50rem;
   position: absolute;
-  top: 227.5rem;
+  top: 250rem;
   width: 100%;
 }

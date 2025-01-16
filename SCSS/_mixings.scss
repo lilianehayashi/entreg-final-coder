@@ -1,0 +1,10 @@
+@mixin works ($cor-fonte: $preto) {
+    font-family: $fonte-titulos;
+    font-weight: 800;
+    font-size: 11rem;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+      color: $cor-fonte;
+    padding-left: 5rem;
+  }
