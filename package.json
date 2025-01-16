@@ -12,7 +12,9 @@
   "description": "",
   "dependencies": {
     "animate.css": "^4.1.1",
-    "aos": "^2.3.4",
-    "node-sass": "^9.0.0"
+    "aos": "^2.3.4"
+  },
+  "devDependencies": {
+    "sass": "^1.83.4"
   }
 }
